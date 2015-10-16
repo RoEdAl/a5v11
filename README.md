@@ -5,10 +5,17 @@
 ## Huawei dongle with Lycamobile network support
 
 * **ncm** mode  (```kmod-usb-net-huawei-cdc-ncm``` kernel module)
+
+  ````
+  config interface wan
+	option proto ncm
+	option device '/dev/cdc-wdm0'
+  ````
+
 * no *luci*
 * IPv6 disabled
 * **iptables** configured to work with *Lycamobile* (PL) network
-* AP configured not enabled by default
+* AP configured, not enabled by default
 
 ----
 
