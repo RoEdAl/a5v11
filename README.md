@@ -1,4 +1,4 @@
-# OpenWRT mage builder helpers for a5-v11 router (CC 15.05)
+# OpenWRT mage builder helpers for A5-V11 router (CC 15.05)
 
 [A5-V11 OpenWRT page](http://wiki.openwrt.org/toh/unbranded/a5-v11).
 
