@@ -1,0 +1,13 @@
+# Put your custom commands here that should be executed once
+# the system init finished.
+
+# Turn off unused ethernet ports
+/usr/bin/io -4 0x101100c0 0x08002001
+/usr/bin/io -4 0x101100c0 0x08002002
+/usr/bin/io -4 0x101100c0 0x08002003
+/usr/bin/io -4 0x101100c0 0x08002004
+
+# Auto-tune CPU frequency
+/usr/bin/io -4 0x10000044 0x80020133
+
+exit 0
