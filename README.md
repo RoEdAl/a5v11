@@ -2,7 +2,7 @@
 
 [A5-V11 OpenWRT page](http://wiki.openwrt.org/toh/unbranded/a5-v11).
 
-## Huawei dongle with Lycamobile network support
+## Sharing Internet from Lycamobile (PL) provider using Huawei 3G/UMTS dongle.
 
 * **ncm** mode  (```kmod-usb-net-huawei-cdc-ncm``` kernel module).
 
@@ -19,10 +19,11 @@
    lsusb
    Bus 001 Device 005: ID 12d1:1506 Huawei Technologies Co., Ltd. E398 LTE/UMTS/GSM Modem/Networkcard
    ```
-* No *luci*.
+* No [**LuCI**](http://wiki.openwrt.org/doc/howto/luci.essentials).
 * IPv6 disabled.
-* **iptables** configured to work with *Lycamobile* (PL) network (TTL mangling).
+* **iptables** configured to enable Internet sharing from *Lycamobile* (PL) provider (TTL mangling).
 * AP configured, not enabled by default.
+* [extroot](http://wiki.openwrt.org/doc/howto/extroot) ready
 
 # General build instrucitons.
 
