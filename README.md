@@ -2,6 +2,14 @@
 
 [A5-V11 OpenWRT page](http://wiki.openwrt.org/toh/unbranded/a5-v11).
 
+## Huawei dongle with Lycamobile network support
+
+* **ncm** mode  (```kmod-usb-net-huawei-cdc-ncm``` kernel module)
+* no *luci*
+* IPv6 disabled
+* **iptables** configured to work with *Lycamobile* (PL) network
+* AP configured not enabled by default
+
 ----
 
 * Download OpenWRT [image builder](http://wiki.openwrt.org/doc/howto/obtain.firmware.generate) from [here](http://downloads.openwrt.org/chaos_calmer/15.05/ramips/rt305x/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64.tar.bz2).
