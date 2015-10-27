@@ -3,47 +3,46 @@ config defaults
 	option input		ACCEPT
 	option output		ACCEPT
 	option forward		REJECT
-# Uncomment this line to disable ipv6 rules
 	option disable_ipv6	1
 
 config zone
-	option name		    lan
+	option name		lan
 	list   network		lan
 	option input		ACCEPT
 	option output		ACCEPT
 	option forward		ACCEPT
 
 config zone
-	option name		    wan
+	option name		wan
 	list   network		wan
 	option input		REJECT
 	option output		ACCEPT
 	option forward		REJECT
-	option masq		    1
+	option masq		1
 	option mtu_fix		1
 
 config zone
-    option name         wlan
-    list network        wlan
-    option input        ACCEPT
-    option output       ACCEPT
-    option forward      REJECT
+	option name         wlan
+	list network        wlan
+	option input        ACCEPT
+	option output       ACCEPT
+	option forward      REJECT
 
 config forwarding
-    option src          wlan
-    option dest         wan
-
-config forwarding
-    option src          lan
+	option src          wlan
 	option dest         wan
 
-#config forwarding
-#    option src          lan
-#    option dest         wlan	
+config forwarding
+	option src          lan
+	option dest         wan
 
-#config forwarding
-#    option src          wlan
-#    option dest         lan
+config forwarding
+	option src          lan
+	option dest         wlan	
+
+config forwarding
+	option src          wlan
+	option dest         lan
 
 # We need to accept udp packets on port 68,
 # see https://dev.openwrt.org/ticket/4108

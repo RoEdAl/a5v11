@@ -1,0 +1,11 @@
+config igmpproxy
+	option quickleave 1
+
+config phyint wlan
+	option network wlan
+	option direction upstream
+#	list altnet 10.0.0.1/24
+
+config phyint lan
+	option network lan
+	option direction downstream

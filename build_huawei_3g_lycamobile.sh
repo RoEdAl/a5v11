@@ -6,8 +6,9 @@ packages=( \
     -odhcpd -odhcp6c \
     -ip6tables -kmod-ip6tables \
     iptables-mod-ipopt kmod-ipt-conntrack \
-    ipset -dnsmasq dnsmasq-full \
+    kmod-ipt-ipset \
     -wpad-mini hostapd \
+    igmpproxy \
     usb-modeswitch comgt-ncm \
     kmod-usb-net-huawei-cdc-ncm \
     block-mount kmod-usb-storage-extras \
