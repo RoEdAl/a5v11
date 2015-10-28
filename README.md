@@ -21,11 +21,15 @@
    ```
 * No [**LuCI**](http://wiki.openwrt.org/doc/howto/luci.essentials).
 * IPv6 disabled.
-* **iptables** configured to enable Internet sharing from *Lycamobile* (PL) provider (TTL mangling).
-* AP configured, not enabled by default.
-* [extroot](http://wiki.openwrt.org/doc/howto/extroot) ready
+* iptables configured to enable Internet sharing from *Lycamobile* (PL) provider (TTL mangling).
+* Two subnets:
+  * 10.0.0.1/24 - ethernet, 12h lease time
+  * 10.0.1.1/24 - wireless, 1h lease time
+* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured (not enabled).
+* AP configured (not enabled).
+* [extroot](http://wiki.openwrt.org/doc/howto/extroot) ready.
  
-# Installed packages.
+### Installed packages.
 
 ```
 root@A5V11:/tmp# opkg list-installed
