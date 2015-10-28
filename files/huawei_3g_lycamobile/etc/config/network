@@ -10,8 +10,8 @@ config interface 'lan'
 	option ifname 'eth0.1'
 	option force_link '1'
 	option macaddr '02:12:00:01:4f:24'
-	option type 'bridge'
-	option proto 'static'
+	option type bridge
+	option proto static
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
 	option ipv6 0
@@ -31,11 +31,11 @@ config interface wan
 	option pdptype IP
 
 config switch
-	option name 'switch0'
-	option reset '1'
-	option enable_vlan '1'
+	option name switch0
+	option reset 1
+	option enable_vlan 1
 
 config switch_vlan
-	option device 'switch0'
-	option vlan '1'
+	option device switch0
+	option vlan 1
 	option ports '0 6t'
