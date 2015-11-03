@@ -47,6 +47,7 @@ hostapd - 2015-03-25-1
 hostapd-common - 2015-03-25-1
 igmpproxy - 0.1-8
 io - 1
+ipset - 6.24-1
 iptables - 1.4.21-1
 iptables-mod-ipopt - 1.4.21-1
 iw - 3.17-1
@@ -69,6 +70,8 @@ kmod-ipt-core - 3.18.20-1
 kmod-ipt-ipopt - 3.18.20-1
 kmod-ipt-ipset - 3.18.20-1
 kmod-ipt-nat - 3.18.20-1
+kmod-ipt-tee - 3.18.20-1
+kmod-ipv6 - 3.18.20-1
 kmod-leds-gpio - 3.18.20-1
 kmod-lib-crc-ccitt - 3.18.20-1
 kmod-lib-crc-itu-t - 3.18.20-1
@@ -110,6 +113,7 @@ libip4tc - 1.4.21-1
 libip6tc - 1.4.21-1
 libjson-c - 0.12-1
 libjson-script - 2015-06-14-d1c66ef1131d14f0ed197b368d03f71b964e45f8
+libmnl - 1.0.3-2
 libnl-tiny - 0.1-4
 libpthread - 0.9.33.2-1
 librt - 0.9.33.2-1
@@ -133,29 +137,22 @@ wwan - 2014-07-17-1
 ```
 
 # General build instrucitons.
+1. Clone this repository.
 
-* Download OpenWRT [image builder](http://wiki.openwrt.org/doc/howto/obtain.firmware.generate) from [here](http://downloads.openwrt.org/chaos_calmer/15.05/ramips/rt305x/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64.tar.bz2).
+   ```
+   git clone --depth=1 https://github.com/RoEdAl/a5v11
+   ```
+1. Download OpenWRT [image builder](http://wiki.openwrt.org/doc/howto/obtain.firmware.generate) from [here](http://downloads.openwrt.org/chaos_calmer/15.05/ramips/rt305x/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64.tar.bz2) and unapck it.
 
   ```
+  cd a5v11
   wget http://downloads.openwrt.org/chaos_calmer/15.05/ramips/rt305x/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64.tar.bz2
-  ```
-* Unpack package.
-
-  ```
   tar -xjf OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64.tar.bz2
   ```
 
-* Clone this repository.
-
-   ```
-   git clone https://github.com/RoEdAl/a5v11
-   ```
-   
-* Copy files from cloned repository to ```OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64``` directory.
-* Run ```build_...``` script within ```OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64``` directory. 
+1. Run ```build_...``` script. 
 
   ```
-  cd OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64
-  ./build_huawei_3g_lycamobile.sh
+    ./build_huawei_3g_lycamobile.sh
   ```
-* [Flash router](http://wiki.openwrt.org/doc/howto/generic.flashing) with newly created image ```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-factory.bin``` (or [```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-sysupgrade.bin```](http://wiki.openwrt.org/doc/howto/generic.sysupgrade)) located in ```bin/rampis``` subdirectory.
+1. [Flash router](http://wiki.openwrt.org/doc/howto/generic.flashing) with newly created image ```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-factory.bin``` (or [```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-sysupgrade.bin```](http://wiki.openwrt.org/doc/howto/generic.sysupgrade)) located in ```OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64/bin/rampis``` subdirectory.
