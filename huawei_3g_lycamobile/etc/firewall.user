@@ -16,3 +16,7 @@ iptables -t mangle -I PREROUTING -i wwan0 -j TTL --ttl-inc 1
 # iptables -t mangle -I FORWARD -i wwan0 -j TTL --ttl-set 160
 # iptables -t mangle -I PREROUTING -i wwan0 -j TTL --ttl-set 160
 
+# iptables - TEE: copy packets from WAN to specified IP-Gateway
+# IPGATEWAY=10.0.0.2
+# iptables -t mangle -A POSTROUTING -o wwan0 ! -s $IPGATEWAY -j TEE --gateway $IPGATEWAY
+# iptables -t mangle -A PREROUTING -i wwan0 ! -d $IPGATEWAY -j TEE --gateway $IPGATEWAY
