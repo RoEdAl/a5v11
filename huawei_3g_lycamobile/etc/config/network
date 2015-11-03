@@ -30,6 +30,18 @@ config interface wan
 	option ipv6 0
 	option pdptype IP
 
+config interface wlannipv6
+       option ifname wlan0
+       option ipv6 0
+
+config interface wannipv6
+	option ifname wwan0
+	option ipv6 0
+
+config interface ethnipv6
+	option ifname eth0
+	option ipv6 0
+
 config switch
 	option name switch0
 	option reset 1

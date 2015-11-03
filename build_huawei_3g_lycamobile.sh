@@ -27,7 +27,7 @@ packages=( \
     -odhcpd -odhcp6c \
     -ip6tables -kmod-ip6tables \
     iptables-mod-ipopt kmod-ipt-conntrack \
-    kmod-ipt-tee ipset \
+    iptables-mod-tee ipset \
     -wpad-mini hostapd \
     igmpproxy \
     usb-modeswitch comgt-ncm \
