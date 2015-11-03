@@ -40,5 +40,4 @@ packages=( \
     kmod-usb-net-dm9601-ether kmod-usb-net-asix \
     http://downloads.openwrt.org/barrier_breaker/14.07/ramips/rt305x/packages/oldpackages/io_1_ramips_24kec.ipk )
 
-make image -C "$SCRIPT_DIR/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64" PROFILE=A5-V11 PACKAGES="${packages[*]}" 
-FILES="$SCRIPT_DIR/huawei_3g_lycamobile/"
+make image -C "$SCRIPT_DIR/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64" PROFILE=A5-V11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/huawei_3g_lycamobile/"
