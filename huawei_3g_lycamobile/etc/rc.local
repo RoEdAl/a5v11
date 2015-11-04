@@ -10,4 +10,32 @@
 # Auto-tune CPU frequency
 /usr/bin/io -4 0x10000044 0x80020133
 
+#---------------------------------------------------------
+# port mirroring
+# http://backreference.org/2014/06/17/port-mirroring-with-linux-bridges
+
+#sif=wwan0
+#dif=eth0
+
+## ingress
+#tc qdisc add dev "$sif" ingress
+#tc filter add dev "$sif" parent ffff: \
+#          protocol all \
+#          u32 match u8 0 0 \
+#          action mirred egress mirror dev "$dif"
+
+## egress
+#tc qdisc add dev "$sif" handle 1: root prio
+#tc filter add dev "$sif" parent 1: \
+#          protocol all \
+#          u32 match u8 0 0 \
+#          action mirred egress mirror dev "$dif"
+
+
+# --------------------------------------------------------
+# turn off port mirroring
+
+#tc qdisc del dev "$sif" ingress
+#tc qdisc del dev "$sif" root
+
 exit 0
