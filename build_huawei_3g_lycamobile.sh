@@ -29,6 +29,7 @@ packages=(
     iptables-mod-ipopt kmod-ipt-conntrack
     iptables-mod-tee kmod-ipt-ipset
     tc kmod-sched
+    ip kmod-dummy
     -wpad-mini hostapd
     igmpproxy
     usb-modeswitch comgt-ncm
@@ -36,7 +37,6 @@ packages=(
     block-mount kmod-usb-storage-extras
     kmod-fs-ext4
     kmod-fs-vfat kmod-nls-cp437 kmod-nls-iso8859-1
-    kmod-fs-exfat
     kmod-sound-core kmod-usb-audio
     kmod-usb-net-dm9601-ether kmod-usb-net-asix
     http://downloads.openwrt.org/barrier_breaker/14.07/ramips/rt305x/packages/oldpackages/io_1_ramips_24kec.ipk )
