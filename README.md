@@ -47,9 +47,10 @@ hostapd - 2015-03-25-1
 hostapd-common - 2015-03-25-1
 igmpproxy - 0.1-8
 io - 1
-ipset - 6.24-1
+ip - 4.0.0-1
 iptables - 1.4.21-1
 iptables-mod-ipopt - 1.4.21-1
+iptables-mod-tee - 1.4.21-1
 iw - 3.17-1
 jshn - 2015-06-14-d1c66ef1131d14f0ed197b368d03f71b964e45f8
 jsonfilter - 2014-06-19-cdc760c58077f44fc40adbbe41e1556a67c1b9a9
@@ -59,8 +60,8 @@ kmod-crypto-aes - 3.18.20-1
 kmod-crypto-arc4 - 3.18.20-1
 kmod-crypto-core - 3.18.20-1
 kmod-crypto-hash - 3.18.20-1
+kmod-dummy - 3.18.20-1
 kmod-eeprom-93cx6 - 3.18.20-1
-kmod-fs-exfat - 3.18.20+git-20150301-1
 kmod-fs-ext4 - 3.18.20-1
 kmod-fs-vfat - 3.18.20-1
 kmod-gpio-button-hotplug - 3.18.20-1
@@ -92,6 +93,8 @@ kmod-rt2800-mmio - 3.18.20+2015-03-09-3
 kmod-rt2800-soc - 3.18.20+2015-03-09-3
 kmod-rt2x00-lib - 3.18.20+2015-03-09-3
 kmod-rt2x00-mmio - 3.18.20+2015-03-09-3
+kmod-sched - 3.18.20-1
+kmod-sched-core - 3.18.20-1
 kmod-scsi-core - 3.18.20-1
 kmod-sound-core - 3.18.20-1
 kmod-usb-audio - 3.18.20-1
@@ -113,7 +116,6 @@ libip4tc - 1.4.21-1
 libip6tc - 1.4.21-1
 libjson-c - 0.12-1
 libjson-script - 2015-06-14-d1c66ef1131d14f0ed197b368d03f71b964e45f8
-libmnl - 1.0.3-2
 libnl-tiny - 0.1-4
 libpthread - 0.9.33.2-1
 librt - 0.9.33.2-1
@@ -127,6 +129,7 @@ netifd - 2015-06-08-8795f9ef89626cd658f615c78c6a17e990c0dcaa
 opkg - 9c97d5ecd795709c8584e972bfdf3aee3a5b846d-7
 procd - 2015-08-16-0da5bf2ff222d1a499172a6e09507388676b5a08
 swconfig - 10
+tc - 4.0.0-1
 ubox - 2015-07-14-907d046c8929fb74e5a3502a9498198695e62ad8
 ubus - 2015-05-25-f361bfa5fcb2daadf3b160583ce665024f8d108e
 ubusd - 2015-05-25-f361bfa5fcb2daadf3b160583ce665024f8d108e
