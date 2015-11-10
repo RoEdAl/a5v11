@@ -27,16 +27,14 @@ packages=(
     -odhcpd -odhcp6c
     -ip6tables -kmod-ip6tables
     iptables-mod-ipopt kmod-ipt-conntrack
-    iptables-mod-tee kmod-ipt-ipset
-    tc kmod-sched
-    ip kmod-dummy
-    -wpad-mini hostapd
+    kmod-ipt-tee kmod-ipt-ipset
+    kmod-sched kmod-dummy
+    -wpad-mini wpad
     igmpproxy
     usb-modeswitch comgt-ncm
     kmod-usb-net-huawei-cdc-ncm
     block-mount kmod-usb-storage-extras
     kmod-fs-ext4
-    kmod-fs-vfat kmod-nls-cp437 kmod-nls-iso8859-1
     kmod-sound-core kmod-usb-audio
     kmod-usb-net-dm9601-ether kmod-usb-net-asix
     http://downloads.openwrt.org/barrier_breaker/14.07/ramips/rt305x/packages/oldpackages/io_1_ramips_24kec.ipk )
