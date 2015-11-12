@@ -26,10 +26,12 @@ packages=(
     -ppp -ppp-mod-pppoe
     -odhcpd -odhcp6c
     -ip6tables -kmod-ip6tables
-    iptables-mod-ipopt kmod-ipt-conntrack
+    kmod-dummy
+    iptables-mod-ipopt
+    kmod-ipt-conntrack
     kmod-ipt-tee kmod-ipt-ipset
-    kmod-sched kmod-dummy
-    -wpad-mini wpad
+    kmod-sched-core
+    wpad-mini
     igmpproxy
     usb-modeswitch comgt-ncm
     kmod-usb-net-huawei-cdc-ncm
