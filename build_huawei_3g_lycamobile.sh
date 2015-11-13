@@ -26,6 +26,7 @@ packages=(
     kmod-ipt-tee kmod-ipt-ipset
     kmod-sched-core
     wpad-mini
+    iwinfo
     igmpproxy
     usb-modeswitch comgt-ncm
     kmod-usb-net-huawei-cdc-ncm
