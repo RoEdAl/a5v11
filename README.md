@@ -49,6 +49,7 @@ io - 1
 iptables - 1.4.21-1
 iptables-mod-ipopt - 1.4.21-1
 iw - 3.17-1
+iwinfo - 2015-06-01-ade8b1b299cbd5748db1acf80dd3e9f567938371
 jshn - 2015-06-14-d1c66ef1131d14f0ed197b368d03f71b964e45f8
 jsonfilter - 2014-06-19-cdc760c58077f44fc40adbbe41e1556a67c1b9a9
 kernel - 3.18.20-1-c8b57a131072a3198e594822481af3e0
@@ -107,6 +108,7 @@ libc - 0.9.33.2-1
 libgcc - 4.8-linaro-1
 libip4tc - 1.4.21-1
 libip6tc - 1.4.21-1
+libiwinfo - 2015-06-01-ade8b1b299cbd5748db1acf80dd3e9f567938371
 libjson-c - 0.12-1
 libjson-script - 2015-06-14-d1c66ef1131d14f0ed197b368d03f71b964e45f8
 libnl-tiny - 0.1-4
