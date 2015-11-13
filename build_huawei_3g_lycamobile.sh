@@ -1,20 +1,14 @@
 #!/bin/bash
 
+get_abs_dir() {
+  # $1 : relative filename
+  if [ -d "$(dirname "$1")" ]; then
+    echo "$(cd "$(dirname "$1")" && pwd)"
+  fi
+}
+
 # retrieve the full pathname of the called script
-scriptPath=$(which $0)
-
-# check whether the path is a link or not
-if [ -L $scriptPath ]; then
-
-    # it is a link then retrieve the target path and get the directory name
-    SCRIPT_DIR=$(dirname $(readlink -f $scriptPath))
-
-else
-
-    # otherwise just get the directory name of the script path
-    SCRIPT_DIR=$(dirname $scriptPath)
-
-fi
+SCRIPT_DIR=$(get_abs_dir $0)
 
 if [ ! -d "$SCRIPT_DIR/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64" ]; then
     echo "Please install and extract OpenWRT image builder for rampis-rt305x"
