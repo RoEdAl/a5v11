@@ -1,41 +1,15 @@
 # Put your custom commands here that should be executed once
 # the system init finished.
 
-# Turn off unused ethernet ports
-/usr/bin/io -4 0x101100c0 0x08002001
-/usr/bin/io -4 0x101100c0 0x08002002
-/usr/bin/io -4 0x101100c0 0x08002003
-/usr/bin/io -4 0x101100c0 0x08002004
+# http://www.8devices.com/community/viewtopic.php?f=6&t=156
+logger -t RT5350F "Turning off unused ethernet ports"
+io -4 0x101100c0 0x08002001
+io -4 0x101100c0 0x08002002
+io -4 0x101100c0 0x08002003
+io -4 0x101100c0 0x08002004
 
-# Auto-tune CPU frequency
-/usr/bin/io -4 0x10000044 0x80020133
-
-#---------------------------------------------------------
-# port mirroring
-# http://backreference.org/2014/06/17/port-mirroring-with-linux-bridges
-
-#sif=wwan0
-#dif=eth0
-
-## ingress
-#tc qdisc add dev "$sif" ingress
-#tc filter add dev "$sif" parent ffff: \
-#          protocol all \
-#          u32 match u8 0 0 \
-#          action mirred egress mirror dev "$dif"
-
-## egress
-#tc qdisc add dev "$sif" handle 1: root prio
-#tc filter add dev "$sif" parent 1: \
-#          protocol all \
-#          u32 match u8 0 0 \
-#          action mirred egress mirror dev "$dif"
-
-
-# --------------------------------------------------------
-# turn off port mirroring
-
-#tc qdisc del dev "$sif" ingress
-#tc qdisc del dev "$sif" root
+# http://forum.vocore.io/viewtopic.php?f=10&t=284&sid=59df447f79a215d155a003e89bead897
+logger -t RT5350F "Turning on auto CPU scaler"
+io -4 0x10000044 0x80020133
 
 exit 0
