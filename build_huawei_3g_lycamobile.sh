@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ImageBuilderDir=/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64
+
 get_abs_dir() {
   # $1 : relative filename
   if [ -d "$(dirname "$1")" ]; then
@@ -10,14 +12,10 @@ get_abs_dir() {
 # retrieve the full pathname of the called script
 SCRIPT_DIR=$(get_abs_dir $0)
 
-if [ ! -d "$SCRIPT_DIR/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64" ]; then
+if [ ! -d "$SCRIPT_DIR/$ImageBuilderDir" ]; then
     echo "Please install and extract OpenWRT image builder for rampis-rt305x"
     exit 1
 fi
-
-. huawei_3g_lycamobile_pkg.sh
-echo "$KISZKA"
-exit 0
 
 packages=( 
     -luci
@@ -40,4 +38,4 @@ packages=(
     kmod-usb-net-dm9601-ether kmod-usb-net-asix
     http://downloads.openwrt.org/barrier_breaker/14.07/ramips/rt305x/packages/oldpackages/io_1_ramips_24kec.ipk )
 
-make image -C "$SCRIPT_DIR/OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64" PROFILE=A5-V11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/huawei_3g_lycamobile/" BIN_DIR="$SCRIPT_DIR/huawei_3g_lycamobile.bin"
+make image -C "$SCRIPT_DIR/$ImageBuilderDir" PROFILE=A5-V11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/huawei_3g_lycamobile/" BIN_DIR="$SCRIPT_DIR/huawei_3g_lycamobile.bin"
