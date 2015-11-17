@@ -148,9 +148,10 @@ wwan - 2014-07-17-1
   tar -xjf OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64.tar.bz2
   ```
 
-1. Run ```build_...``` script. 
+1. Run ```build_…``` script. 
 
   ```
     ./build_huawei_3g_lycamobile.sh
   ```
-1. [Flash router](http://wiki.openwrt.org/doc/howto/generic.flashing) with newly created image ```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-factory.bin``` (or [```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-sysupgrade.bin```](http://wiki.openwrt.org/doc/howto/generic.sysupgrade)) located in ```OpenWrt-ImageBuilder-15.05-ramips-rt305x.Linux-x86_64/bin/rampis``` subdirectory.
+1. [Flash router](http://wiki.openwrt.org/doc/howto/generic.flashing) with newly created image ```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-factory.bin``` (or [```openwrt-15.05-ramips-rt305x-a5-v11-squashfs-sysupgrade.bin```](http://wiki.openwrt.org/doc/howto/generic.sysupgrade)) from ```huawei_3g_lycamobile.bin``` subdirectory.
+
