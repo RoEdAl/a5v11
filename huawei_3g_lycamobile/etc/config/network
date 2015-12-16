@@ -1,46 +1,29 @@
 
 config interface 'loopback'
-	option ifname 'lo'
-	option proto 'static'
+	option ifname lo
+	option proto static
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
-	option ipv6 0
 
 config interface 'lan'
 	option ifname 'eth0.1'
-	option force_link '1'
+	option force_link 1
 	option macaddr '02:12:00:01:4f:24'
 	option type bridge
 	option proto static
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
-	option ipv6 0
 
 config interface wlan
 	option proto static
 	option type bridge
 	option ipaddr '10.0.1.1'
 	option netmask '255.255.255.0'
-	option ipv6 0
 
 config interface wan
 	option proto ncm
 	option device '/dev/cdc-wdm0'
 	option apn 'data.lycamobile.pl'
-	option ipv6 0
-	option pdptype IP
-
-config interface wlannipv6
-       option ifname wlan0
-       option ipv6 0
-
-config interface wannipv6
-	option ifname wwan0
-	option ipv6 0
-
-config interface ethnipv6
-	option ifname eth0
-	option ipv6 0
 
 config switch
 	option name switch0
