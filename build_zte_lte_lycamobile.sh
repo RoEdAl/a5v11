@@ -37,8 +37,7 @@ packages=(
     block-mount kmod-usb-storage-extras
     kmod-fs-ext4
     kmod-sound-core kmod-usb-audio
-    kmod-usb-net-dm9601-ether kmod-usb-net-asix
-    http://downloads.openwrt.org/barrier_breaker/14.07/ramips/rt305x/packages/oldpackages/io_1_ramips_24kec.ipk
+    kmod-usb-net-asix
     http://dl.eko.one.pl/chaos_calmer/ramips/packages/3ginfo-text_20160623_all.ipk )
 
 make image -C "$SCRIPT_DIR/$ImageBuilderDir" PROFILE=A5-V11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/zte_lte_lycamobile/" BIN_DIR="$SCRIPT_DIR/zte_lte_lycamobile.bin"
