@@ -12,7 +12,7 @@ get_abs_dir() {
 # retrieve the full pathname of the called script
 SCRIPT_DIR=$(get_abs_dir $0)
 
-if [ ! -d "$SCRIPT_DIR/$ImageBuilderDir" ]; then
+if [ ! -d "$SCRIPT_DIR$ImageBuilderDir" ]; then
     echo "Please install and extract OpenWRT image builder for rampis-rt305x"
     exit 1
 fi
@@ -22,22 +22,19 @@ packages=(
     -ppp -ppp-mod-pppoe
     -odhcpd -odhcp6c
     -ip6tables -kmod-ip6tables
-    kmod-dummy
     iptables-mod-ipopt
     kmod-ipt-conntrack
-    kmod-ipt-tee kmod-ipt-ipset
-    kmod-sched-core
+    kmod-ipt-ipset
     wpad-mini
     iwinfo
     igmpproxy
     uqmi
+    kmod-usb-uhci
     kmod-usb-serial kmod-usb-serial-option
     usb-modeswitch
     comgt
     block-mount kmod-usb-storage-extras
-    kmod-fs-ext4
-    kmod-sound-core kmod-usb-audio
-    kmod-usb-net-asix
+    kmod-fs-vfat kmod-nls-cp437 kmod-nls-cp852 kmod-nls-iso8859-1 kmod-nls-iso8859-2
     http://dl.eko.one.pl/chaos_calmer/ramips/packages/3ginfo-text_20160623_all.ipk )
 
-make image -C "$SCRIPT_DIR/$ImageBuilderDir" PROFILE=A5-V11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/zte_lte_lycamobile/" BIN_DIR="$SCRIPT_DIR/zte_lte_lycamobile.bin"
+make image -C "$SCRIPT_DIR$ImageBuilderDir" PROFILE=A5-V11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/zte_lte_lycamobile/" BIN_DIR="$SCRIPT_DIR/zte_lte_lycamobile.bin"
