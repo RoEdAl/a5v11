@@ -8,7 +8,7 @@ config defaults
 config zone
 	option name		lan
 	list   network		lan
-	list   network		wlan
+	list   network		wwan
 	option input		ACCEPT
 	option output		ACCEPT
 	option forward		ACCEPT
