@@ -8,7 +8,6 @@ packages=(
     -opkg
     kmod-usb-uhci
     kmod-usb-net-cdc-ether
-    iptables-mod-ipopt
     kmod-ipt-conntrack
     wpad-mini
     iwinfo
