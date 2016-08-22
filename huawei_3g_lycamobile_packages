@@ -8,7 +8,6 @@ packages=(
     -opkg
     iptables-mod-ipopt
     kmod-ipt-conntrack
-    kmod-ipt-ipset
     wpad-mini
     iwinfo
     igmpproxy
