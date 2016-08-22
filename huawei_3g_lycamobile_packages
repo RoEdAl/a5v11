@@ -1,0 +1,22 @@
+# huawei_3g_lycamobile
+
+packages=( 
+    -luci
+    -ppp -ppp-mod-pppoe
+    -odhcpd -odhcp6c
+    -ip6tables -kmod-ip6tables
+    -opkg
+    iptables-mod-ipopt
+    kmod-ipt-conntrack
+    kmod-ipt-ipset
+    wpad-mini
+    iwinfo
+    igmpproxy
+    kmod-usb-uhci
+    kmod-usb-net-huawei-cdc-ncm
+    kmod-usb-serial kmod-usb-serial-option
+    usb-modeswitch
+    comgt-ncm
+    block-mount kmod-usb-storage-extras
+    kmod-fs-vfat kmod-nls-cp437 kmod-nls-cp852 kmod-nls-iso8859-1 kmod-nls-iso8859-2
+    http://dl.eko.one.pl/chaos_calmer/ramips/packages/3ginfo-text_20160623_all.ipk )

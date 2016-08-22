@@ -6,27 +6,25 @@ config interface loopback
 	option netmask '255.0.0.0'
 
 config interface lan
-	option ifname 'eth0.1'
+	option ifname 'eth0.1 usb0'
 	option force_link 1
 	option macaddr '02:12:00:01:4f:24'
 	option type bridge
 	option proto static
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
+        option gateway '192.168.1.254'
+        option dns     '192.168.1.254' 
 
-config interface wlan
-	option proto static
-	option type bridge
-	option ipaddr '10.0.1.1'
-	option netmask '255.255.255.0'
+config interface wwan
+	option proto dhcp
+        option ipv6 0
 
-config interface wan
-	option proto qmi
-	option device '/dev/cdc-wdm0'
-	option apn 'data.lycamobile.pl'
-	option username lmpl
-	option password plus
-	option delay 170
+config interface stabridge
+        option proto relay
+        list network lan 
+        list network wwan
+        option ipv6 0
 
 config switch
 	option name switch0

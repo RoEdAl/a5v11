@@ -1,0 +1,17 @@
+# wireless_to_wired packages
+
+packages=( 
+    -luci
+    -ppp -ppp-mod-pppoe
+    -odhcpd -odhcp6c
+    -ip6tables -kmod-ip6tables
+    -opkg
+    kmod-usb-uhci
+    kmod-usb-net-cdc-ether
+    iptables-mod-ipopt
+    kmod-ipt-conntrack
+    wpad-mini
+    iwinfo
+    relayd
+    igmpproxy
+)

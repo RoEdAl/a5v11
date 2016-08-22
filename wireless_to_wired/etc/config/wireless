@@ -1,0 +1,27 @@
+config wifi-device  radio0
+	option type     mac80211
+	option channel  6
+	option hwmode	11g
+	option htmode	HT20
+	option path     '10180000.wmac'
+	option country  PL
+	option disabled 1
+
+# STA
+config wifi-iface
+	option device       radio0
+	option network      wwan
+	option mode         sta
+	option ssid         Whizme
+	option encryption   psk2
+	option key          'Paralotnia ma powidok'
+	option macaddr      '02:12:00:01:4f:25'
+
+# optional AP
+#config wifi-iface
+#	option device radio0
+#	option network lan 
+#	option mode ap
+#	option ssid 'RepeaterWirelessNetwork'
+#	option encryption 'psk2+tkip+ccmp'
+#	option key 'RepeaterWirelessPassword'

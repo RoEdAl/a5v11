@@ -1,0 +1,20 @@
+config defaults
+	option syn_flood	1
+	option input		ACCEPT
+	option output		ACCEPT
+	option forward		REJECT
+	option disable_ipv6	1
+
+config zone
+	option name		lan
+	list   network		lan
+	list   network		wlan
+	option input		ACCEPT
+	option output		ACCEPT
+	option forward		ACCEPT
+
+
+# include a file with users custom iptables rules
+config include
+	option path /etc/firewall.user
+
