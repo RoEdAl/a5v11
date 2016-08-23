@@ -3,10 +3,16 @@
 
 # http://www.8devices.com/community/viewtopic.php?f=6&t=156
 logger -t RT5350F "Turning off unused ethernet ports"
-devmem 0x101100c0 32 0x08002001
-devmem 0x101100c0 32 0x08002002
-devmem 0x101100c0 32 0x08002003
-devmem 0x101100c0 32 0x08002004
+swconfig dev switch0 port 1 set disable 1
+swconfig dev switch0 port 2 set disable 1
+swconfig dev switch0 port 3 set disable 1
+swconfig dev switch0 port 4 set disable 1
+swconfig dev switch0 set apply 
+
+#devmem 0x101100c0 32 0x08002001
+#devmem 0x101100c0 32 0x08002002
+#devmem 0x101100c0 32 0x08002003
+#devmem 0x101100c0 32 0x08002004
 
 # http://forum.vocore.io/viewtopic.php?f=10&t=284&sid=59df447f79a215d155a003e89bead897
 logger -t RT5350F "Turning on auto CPU scaler"
