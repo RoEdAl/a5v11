@@ -20,7 +20,7 @@
    Bus 001 Device 005: ID 12d1:1506 Huawei Technologies Co., Ltd. E398 LTE/UMTS/GSM Modem/Networkcard
    ```
 * No [**LuCI**](http://wiki.openwrt.org/doc/howto/luci.essentials).
-* No `opkg`.
+* No [**opkg**](http://wiki.openwrt.org/doc/techref/opkg).
 * IPv6 disabled.
 * iptables configured to enable Internet sharing from *Lycamobile* (PL) provider (TTL mangling).
 * Two subnets:
@@ -40,12 +40,9 @@
         option apn 'data.lycamobile.pl'
         option username lmpl
         option password plus
-        option delay 40
-
   ````
-
 * No [LuCI](http://wiki.openwrt.org/doc/howto/luci.essentials).
-* No `opkg`.
+* No [**opkg**](http://wiki.openwrt.org/doc/techref/opkg).
 * IPv6 disabled.
 * iptables configured to enable Internet sharing from Lycamobile (PL) provider (TTL mangling).
 * Two subnets:
@@ -56,6 +53,7 @@
 
 ## `wireless_to_wired` - WiFi to Ethernet bridge using [relayd](https://wiki.openwrt.org/doc/uci/network#protocol_relay_relayd_pseudo_bridge) pseudo bridge.
 
+* No [**opkg**](http://wiki.openwrt.org/doc/techref/opkg).
 * USB-Ethernet gadget support (Raspberry Pi Zero for example).
 
 See also:
