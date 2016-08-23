@@ -26,7 +26,6 @@ config interface wan
 	option apn 'data.lycamobile.pl'
 	option username lmpl
 	option password plus
-	option delay 170
 
 config switch
 	option name switch0
