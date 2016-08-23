@@ -23,6 +23,12 @@
 * No [**opkg**](http://wiki.openwrt.org/doc/techref/opkg).
 * IPv6 disabled.
 * iptables configured to enable Internet sharing from *Lycamobile* (PL) provider (TTL mangling).
+
+  ````
+  iptables -t mangle -I POSTROUTING -o wwan0 -j TTL --ttl-inc 1
+  iptables -t mangle -I FORWARD -i wwan0 -j TTL --ttl-inc 1
+  iptables -t mangle -I PREROUTING -i wwan0 -j TTL --ttl-inc 1
+  ````
 * Two subnets:
   * 10.0.0.1/24 - ethernet, 12h lease time
   * 10.0.1.1/24 - wireless, 1h lease time
@@ -41,10 +47,16 @@
         option username lmpl
         option password plus
   ````
-* No [LuCI](http://wiki.openwrt.org/doc/howto/luci.essentials).
+* No [**LuCI**](http://wiki.openwrt.org/doc/howto/luci.essentials).
 * No [**opkg**](http://wiki.openwrt.org/doc/techref/opkg).
 * IPv6 disabled.
 * iptables configured to enable Internet sharing from Lycamobile (PL) provider (TTL mangling).
+
+  ````
+  iptables -t mangle -I POSTROUTING -o wwan0 -j TTL --ttl-inc 1
+  iptables -t mangle -I FORWARD -i wwan0 -j TTL --ttl-inc 1
+  iptables -t mangle -I PREROUTING -i wwan0 -j TTL --ttl-inc 1
+  ````
 * Two subnets:
   * 10.0.0.1/24 - ethernet, 12h lease time
   * 10.0.1.1/24 - wireless, 1h lease time
