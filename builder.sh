@@ -33,12 +33,7 @@ fi
 
 PACKAGES_DESC=$SCRIPT_DIR/${PROFILE_NAME}_packages
 
-if [ ! -f $PACKAGES_DESC ]; then
-   echo "There's no package file to profile $PROFILE_NAME"
-   exit 1
-fi
-
-. $PACKAGES_DESC
+. $PACKAGES_DESC || exit 1
 
 is_array packages || {
     echo 'Packages array not specified'
