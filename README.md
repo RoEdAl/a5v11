@@ -1,8 +1,10 @@
-# OpenWRT mage builder helpers for A5-V11 router (CC 15.05.1)
+# OpenWRT image builder helpers for A5-V11 router (CC 15.05.1)
 
-[A5-V11 OpenWRT page](http://wiki.openwrt.org/toh/unbranded/a5-v11).
+[A5-V11 router - OpenWRT page](http://wiki.openwrt.org/toh/unbranded/a5-v11).
 
-## `huawei_3g_lycamobile` - sharing Internet from Lycamobile (PL) provider using Huawei 3G/UMTS dongle.
+# Profiles:
+
+## `huawei_3g_lycamobile` - sharing Internet from Lycamobile (PL) provider using Huawei 3G/UMTS dongle (not maintained anymore).
 
 * **ncm** mode  (```kmod-usb-net-huawei-cdc-ncm``` kernel module).
 
@@ -65,7 +67,10 @@
 
 ## `wireless_to_wired` - WiFi to Ethernet bridge using [relayd](https://wiki.openwrt.org/doc/uci/network#protocol_relay_relayd_pseudo_bridge) pseudo bridge.
 
+* AP Subnet - 192.168.1.0/24, gateway 192.168.1.254.
+* Client Subnet - 10.0.0.0/24, static address 10.0.0.1.
 * No [**opkg**](http://wiki.openwrt.org/doc/techref/opkg).
+* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured (not enabled).
 * USB-Ethernet gadget support (Raspberry Pi Zero for example).
 
 See also:
@@ -84,14 +89,13 @@ See also:
    git clone https://github.com/RoEdAl/a5v11
    ```
 1. Download OpenWRT [image builder](http://wiki.openwrt.org/doc/howto/obtain.firmware.generate) from 
-[here](http://downloads.openwrt.org/chaos_calmer/15.05.1/ramips/rt305x/OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64.tar.bz2) and unapck it.
+   [here](http://downloads.openwrt.org/chaos_calmer/15.05.1/ramips/rt305x/OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64.tar.bz2) and unapck it.
 
   ```
   cd a5v11
   wget http://downloads.openwrt.org/chaos_calmer/15.05.1/ramips/rt305x/OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64.tar.bz2
   tar -xjf OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64.tar.bz2
   ```
-
 1. Run proper ```build_…``` script. 
 
   ```
