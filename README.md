@@ -1,4 +1,4 @@
-# OpenWRT image builder helpers for A5-V11 router (CC 15.05.1)
+# OpenWRT image builders for A5-V11 router (CC 15.05.1)
 
 [A5-V11 router - OpenWRT page](http://wiki.openwrt.org/toh/unbranded/a5-v11).
 
