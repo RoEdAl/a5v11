@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Based on solution found in:
+# http://dev.openwrt.org/ticket/20443
+
+# wwan interface only
+[ "$INTERFACE" = wlan ] || exit 0
+
+# start
+[ "$ACTION" = ifup -o "$ACTION" = ifupdate ] && /etc/init.d/igmpproxy restart
+
+# stop
+[ "$ACTION" = ifdown ] && /etc/init.d/igmpproxy stop
