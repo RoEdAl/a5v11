@@ -34,7 +34,7 @@
 * Two subnets:
   * 10.0.0.1/24 - ethernet, 12h lease time
   * 10.0.1.1/24 - wireless, 1h lease time
-* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured (not enabled).
+* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured invoked by [hotplug hook](http://dev.openwrt.org/ticket/20443).
 * AP configured (not enabled).
 
 ## `zte_lte_lycamobile` - Sharing Internet from Lycamobile (PL) provider using ZTE MF821 USB dongle
@@ -62,7 +62,7 @@
 * Two subnets:
   * 10.0.0.1/24 - ethernet, 12h lease time
   * 10.0.1.1/24 - wireless, 1h lease time
-* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured (not enabled).
+* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured invoked by [hotplug hook](http://dev.openwrt.org/ticket/20443).
 * AP configured (not enabled).
 
 ## `wireless_to_wired` - WiFi to Ethernet bridge using [relayd](https://wiki.openwrt.org/doc/uci/network#protocol_relay_relayd_pseudo_bridge) pseudo bridge.
@@ -70,7 +70,7 @@
 * AP Subnet - 192.168.1.0/24, gateway 192.168.1.254.
 * Client Subnet - 10.0.0.0/24, static address 10.0.0.1.
 * No [**opkg**](http://wiki.openwrt.org/doc/techref/opkg).
-* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured (not enabled).
+* [igmpproxy](http://wiki.openwrt.org/doc/howto/udp_multicast) configured invoked by [hotplug hook](http://dev.openwrt.org/ticket/20443).
 * USB-Ethernet gadget support (Raspberry Pi Zero for example).
 
 See also:
@@ -80,6 +80,7 @@ See also:
 * [RASPBERRY PI ZERO – PROGRAMMING OVER USB!](http://blog.gbaman.info/?p=699).
     * [Setting up Pi Zero OTG - The quick way](http://gist.github.com/gbaman/975e2db164b3ca2b51ae11e45e8fd40a).
     * [Raspberry Pi Zero OTG Mode](http://gist.github.com/gbaman/50b6cca61dd1c3f88f41).
+* [OpenWRT ticket #20443 - igmpproxy will not start at boot up](http://dev.openwrt.org/ticket/20443)
 
 
 # General build instrucitons.
