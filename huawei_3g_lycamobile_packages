@@ -18,4 +18,4 @@ packages=(
     comgt-ncm
     block-mount kmod-usb-storage-extras
     kmod-fs-vfat kmod-nls-cp437 kmod-nls-cp852 kmod-nls-iso8859-1 kmod-nls-iso8859-2
-    http://dl.eko.one.pl/chaos_calmer/ramips/packages/3ginfo-text_20160623_all.ipk )
+    http://dl.eko.one.pl/chaos_calmer/ramips/packages/3ginfo-text_20160902_all.ipk )
