@@ -14,17 +14,14 @@ config interface lan
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
         option gateway '192.168.1.254'
-        option dns     '192.168.1.254' 
 
 config interface wwan
 	option proto dhcp
-        option ipv6 0
 
 config interface stabridge
         option proto relay
         list network lan 
         list network wwan
-        option ipv6 0
 
 config switch
 	option name switch0
