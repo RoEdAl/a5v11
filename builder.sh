@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ImageBuilderDir=/OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64
+#ImageBuilderDir=/OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64
+ImageBuilderDir=/lede-imagebuilder-17.01.0-ramips-rt305x.Linux-x86_64
 
 get_abs_dir() {
   # $1 : relative filename
@@ -40,4 +41,4 @@ is_array packages || {
     exit 1
 }
 
-make image -C "$SCRIPT_DIR$ImageBuilderDir" PROFILE=A5-V11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/$PROFILE_NAME/" BIN_DIR="$SCRIPT_DIR/$PROFILE_NAME.bin"
+make image -C "$SCRIPT_DIR$ImageBuilderDir" PROFILE=a5-v11 PACKAGES="${packages[*]}" FILES="$SCRIPT_DIR/$PROFILE_NAME/" BIN_DIR="$SCRIPT_DIR/$PROFILE_NAME.lede-bin"
