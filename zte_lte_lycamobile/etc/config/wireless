@@ -2,9 +2,10 @@ config wifi-device  radio0
 	option type     mac80211
 	option channel  5
 	option hwmode	11g
-	option htmode	HT20
+	option htmode	HT40
 	option path     '10180000.wmac'
 	option country  PL
+	option noscan	1
 	option disabled 1
 
 config wifi-iface
@@ -15,4 +16,3 @@ config wifi-iface
 	option encryption   'psk2+tkip+ccmp'
 	option key          'Kiszonka ma samolot'
 	option macaddr      '02:12:00:01:4f:25'
-
