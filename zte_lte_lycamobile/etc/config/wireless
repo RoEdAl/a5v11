@@ -15,4 +15,5 @@ config wifi-iface
 	option ssid         Lycamobile
 	option encryption   'psk2+tkip+ccmp'
 	option key          'Kiszonka ma samolot'
+	option maxassoc	    10
 	option macaddr      '02:12:00:01:4f:25'

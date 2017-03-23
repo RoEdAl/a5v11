@@ -1,10 +1,11 @@
 #!/bin/sh
-/etc/init.d/relayd enabled && /etc/init.d/relayd start
-
-# enable access from client network
 [ "$INTERFACE" = wwan ] || exit 0
 [ "$ACTION" = ifup -o "$ACTION" = ifupdate ] || exit 0
 
+# restart relayd
+/etc/init.d/relayd enabled && /etc/init.d/relayd restart
+
+# enable access from client network
 . /lib/functions/network.sh; network_get_ipaddr ip wwan;
 
 uci set network.stabridge.ipaddr=$ip

@@ -8,6 +8,7 @@ packages=(
     -opkg
     iptables-mod-ipopt
     kmod-ipt-conntrack
+    kmod-rt2800-usb
     wpad-mini
     iwinfo
     igmpproxy
@@ -17,5 +18,5 @@ packages=(
     usb-modeswitch
     comgt
     block-mount kmod-usb-storage-extras
-    kmod-fs-vfat kmod-nls-cp437 kmod-nls-cp852 kmod-nls-iso8859-1 kmod-nls-iso8859-2
+    kmod-fs-f2fs
     http://dl.eko.one.pl/chaos_calmer/ramips/packages/3ginfo-text_20170106_all.ipk )
