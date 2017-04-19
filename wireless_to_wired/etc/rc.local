@@ -9,13 +9,8 @@ swconfig dev switch0 port 3 set disable 1
 swconfig dev switch0 port 4 set disable 1
 swconfig dev switch0 set apply 
 
-#devmem 0x101100c0 32 0x08002001
-#devmem 0x101100c0 32 0x08002002
-#devmem 0x101100c0 32 0x08002003
-#devmem 0x101100c0 32 0x08002004
-
 # http://forum.vocore.io/viewtopic.php?f=10&t=284&sid=59df447f79a215d155a003e89bead897
 logger -t RT5350F "Turning on auto CPU scaler"
-devmem 0x10000044 32 0x80020133
+mems 0x10000044 0x80020133
 
 exit 0
