@@ -6,17 +6,19 @@
 # put custom rules into the root chains e.g. INPUT or FORWARD or into the
 # special user chains, e.g. input_wan_rule or postrouting_lan_rule.
 
-# Lycamobile sharing
-iptables -t mangle -I POSTROUTING -o wwan0 -j TTL --ttl-inc 1
-iptables -t mangle -I FORWARD -i wwan0 -j TTL --ttl-inc 1
-iptables -t mangle -I PREROUTING -i wwan0 -j TTL --ttl-inc 1
+. /lib/functions/network.sh
+network_get_physdev IFNAME wan
 
-# Lycamobile sharing - alternate method
-# iptables -t mangle -I POSTROUTING -o wwan0 -j TTL --ttl-set 160
-# iptables -t mangle -I FORWARD -i wwan0 -j TTL --ttl-set 160
-# iptables -t mangle -I PREROUTING -i wwan0 -j TTL --ttl-set 160
+[ -z "$IFNAME" ] && exit 0
 
-# iptables - TEE: copy packets from WAN to specified IP-Gateway
-# IPGATEWAY=10.0.0.2
-# iptables -t mangle -A POSTROUTING -o wwan0 ! -s $IPGATEWAY -j TEE --gateway $IPGATEWAY
-# iptables -t mangle -A PREROUTING -i wwan0 ! -d $IPGATEWAY -j TEE --gateway $IPGATEWAY
+# Lycamobile sharing - TTL++
+iptables -t mangle -I POSTROUTING -o $IFNAME -j TTL --ttl-inc 1
+iptables -t mangle -I FORWARD -i $IFNAME -j TTL --ttl-inc 1
+iptables -t mangle -I PREROUTING -i $IFNAME -j TTL --ttl-inc 1
+
+# Lycamobile sharing - fixed TTL
+# LMTTL=160
+# iptables -t mangle -I POSTROUTING -o $IFNAME -j TTL --ttl-set $LMTTL
+# iptables -t mangle -I FORWARD -i $IFNAME -j TTL --ttl-set $LMTTL
+# iptables -t mangle -I PREROUTING -i $IFNAME -j TTL --ttl-set $LMTTL
+

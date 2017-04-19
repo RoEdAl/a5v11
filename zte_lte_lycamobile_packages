@@ -1,3 +1,4 @@
+
 # zte_to_lycamobile
 
 packages=( 
@@ -9,6 +10,8 @@ packages=(
     iptables-mod-ipopt
     kmod-ipt-conntrack
     kmod-rt2800-usb
+    kmod-usb-net-cdc-ether kmod-usb-net-cdc-ncm
+    kmod-usb-dwc2
     wpad-mini
     iwinfo
     igmpproxy
@@ -17,6 +20,5 @@ packages=(
     kmod-usb-serial kmod-usb-serial-option
     usb-modeswitch
     comgt
-    block-mount kmod-usb-storage-extras
-    kmod-fs-f2fs
-    http://dl.eko.one.pl/chaos_calmer/ramips/packages/3ginfo-text_20170106_all.ipk )
+    picocom
+    http://dl.eko.one.pl/lede/17.01-SNAPSHOT/packages/mips_24kc/base/3ginfo-text_20170317_all.ipk )

@@ -4,6 +4,7 @@ config interface loopback
 	option proto static
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
+	option ipv6 0
 
 config interface lan
 	option ifname 'eth0.1'
@@ -13,12 +14,18 @@ config interface lan
 	option proto static
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
+	option ipv6 0
 
 config interface wlan
 	option proto static
 	option type bridge
 	option ipaddr '10.0.1.1'
 	option netmask '255.255.255.0'
+	option ipv6 0
+
+config interface wlan0-dev
+	option ifname wlan0
+	option ipv6 0
 
 config interface wan
 	option proto qmi
@@ -26,6 +33,11 @@ config interface wan
 	option apn 'data.lycamobile.pl'
 	option username lmpl
 	option password plus
+	option ipv6 0
+
+config interface wwan0-dev
+	option ifname wwan0
+	option ipv6 0
 
 config switch
 	option name switch0
