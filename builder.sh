@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #ImageBuilderDir=/OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64
-ImageBuilderDir=/lede-imagebuilder-17.01.0-ramips-rt305x.Linux-x86_64
+ImageBuilderDir=/lede-imagebuilder-17.01.1-ramips-rt305x.Linux-x86_64
 
 get_abs_dir() {
   # $1 : relative filename
