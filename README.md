@@ -91,12 +91,12 @@ See also:
    git clone https://github.com/RoEdAl/a5v11
    ```
 1. Download LEDE [image builder](http://lede-project.org/docs/user-guide/imagebuilder) from 
-   [here](http://downloads.lede-project.org/releases/17.01.0/targets/ramips/rt305x/lede-imagebuilder-17.01.0-ramips-rt305x.Linux-x86_64.tar.xz) and unapck it.
+   [here](http://downloads.lede-project.org/releases/17.01.1/targets/ramips/rt305x/lede-imagebuilder-17.01.1-ramips-rt305x.Linux-x86_64.tar.xz) and unapck it.
 
   ```
   cd a5v11
-  wget http://downloads.lede-project.org/releases/17.01.0/targets/ramips/rt305x/lede-imagebuilder-17.01.0-ramips-rt305x.Linux-x86_64.tar.xz
-  tar -xvf lede-imagebuilder-17.01.0-ramips-rt305x.Linux-x86_64.tar.xz
+  wget http://downloads.lede-project.org/releases/17.01.1/targets/ramips/rt305x/lede-imagebuilder-17.01.1-ramips-rt305x.Linux-x86_64.tar.xz
+  tar -xvf lede-imagebuilder-17.01.1-ramips-rt305x.Linux-x86_64.tar.xz
   ```
 1. Run proper ```build_…``` script. 
 
@@ -104,7 +104,7 @@ See also:
     ./build_huawei_3g_lycamobile.sh
   ```
 1. [Flash router](http://wiki.openwrt.org/doc/howto/generic.flashing) with newly created image
-   ```lede-17.01.0-r3205-59508e3-ramips-rt305x-a5-v11-squashfs-factory.bin``` (or 
-[```lede-17.01.0-r3205-59508e3-ramips-rt305x-a5-v11-squashfs-sysupgrade.bin```](http://wiki.openwrt.org/doc/howto/generic.sysupgrade))
-   from ```….lede-bin``` (e. g. ```huawei_3g_lycamobile.lede-bin```) subdirectory.
+   ```lede-17.01.1-ramips-rt305x-a5-v11-squashfs-factory.bin``` (or 
+[```lede-17.01.0-ramips-rt305x-a5-v11-squashfs-sysupgrade.bin```](http://wiki.openwrt.org/doc/howto/generic.sysupgrade))
+   from proper  ```….lede-bin``` (e. g. ```huawei_3g_lycamobile.lede-bin```) subdirectory.
 
