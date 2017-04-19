@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#ImageBuilderDir=/OpenWrt-ImageBuilder-15.05.1-ramips-rt305x.Linux-x86_64
 ImageBuilderDir=/lede-imagebuilder-17.01.1-ramips-rt305x.Linux-x86_64
 
 get_abs_dir() {
@@ -28,7 +27,7 @@ PROFILE_NAME=$(get_profile_name $0)
 echo "Profile: $PROFILE_NAME"
 
 if [ ! -d "$SCRIPT_DIR$ImageBuilderDir" ]; then
-    echo "Please install and extract OpenWRT image builder for rampis-rt305x"
+    echo "Please install and extract LEDE image builder for rampis-rt305x"
     exit 1
 fi
 

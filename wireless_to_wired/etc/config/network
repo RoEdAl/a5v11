@@ -4,6 +4,15 @@ config interface loopback
 	option proto static
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
+	option ipv6 0
+
+config interface eth0-dev
+	option ifname eth0
+	option ipv6 0
+
+config interface usb0-dev
+	option ifname usb0
+	option ipv6 0
 
 config interface lan
 	option ifname 'eth0.1 usb0'
@@ -14,14 +23,21 @@ config interface lan
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
         option gateway '192.168.1.254'
+	option ipv6 0
 
 config interface wwan
 	option proto dhcp
+	option ipv6 0
+
+config interface wlan0-dev
+	option ifname wlan0
+	option ipv6 0
 
 config interface stabridge
         option proto relay
         list network lan 
         list network wwan
+	option ipv6 0
 
 config switch
 	option name switch0

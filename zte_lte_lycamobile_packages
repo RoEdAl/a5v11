@@ -11,7 +11,7 @@ packages=(
     kmod-ipt-conntrack
     kmod-rt2800-usb
     kmod-usb-net-cdc-ether kmod-usb-net-cdc-ncm
-    kmod-usb-dwc2
+    kmod-usb-dwc2 kmod-usb-ledtrig-usbport
     wpad-mini
     iwinfo
     igmpproxy

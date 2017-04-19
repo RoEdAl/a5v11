@@ -6,6 +6,10 @@ config interface loopback
 	option netmask '255.0.0.0'
 	option ipv6 0
 
+config interface eth0-dev
+	option ifname eth0
+	option ipv6 0
+
 config interface lan
 	option ifname 'eth0.1'
 	option force_link 1
