@@ -6,14 +6,6 @@ config interface loopback
 	option netmask '255.0.0.0'
 	option ipv6 0
 
-config interface eth0-dev
-	option ifname eth0
-	option ipv6 0
-
-config interface usb0-dev
-	option ifname usb0
-	option ipv6 0
-
 config interface lan
 	option ifname 'eth0.1 usb0'
 	option force_link 1
@@ -27,10 +19,6 @@ config interface lan
 
 config interface wwan
 	option proto dhcp
-	option ipv6 0
-
-config interface wlan0-dev
-	option ifname wlan0
 	option ipv6 0
 
 config interface stabridge
