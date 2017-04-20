@@ -6,10 +6,6 @@ config interface loopback
 	option netmask '255.0.0.0'
 	option ipv6 0
 
-config interface eth0-dev
-	option ifname eth0
-	option ipv6 0
-
 config interface lan
 	option ifname 'eth0.1'
 	option force_link 1
@@ -27,20 +23,12 @@ config interface wlan
 	option netmask '255.255.255.0'
 	option ipv6 0
 
-config interface wlan0-dev
-	option ifname wlan0
-	option ipv6 0
-
 config interface wan
 	option proto qmi
 	option device '/dev/cdc-wdm0'
 	option apn 'data.lycamobile.pl'
 	option username lmpl
 	option password plus
-	option ipv6 0
-
-config interface wwan0-dev
-	option ifname wwan0
 	option ipv6 0
 
 config switch
