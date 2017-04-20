@@ -10,7 +10,7 @@ swconfig dev switch0 port 4 set disable 1
 swconfig dev switch0 set apply 
 
 # http://forum.vocore.io/viewtopic.php?f=10&t=284&sid=59df447f79a215d155a003e89bead897
-logger -t RT5350F "Turning on auto CPU scaler"
-mems 0x10000044 0x80020133
+# logger -t RT5350F "Setting CPU_AUTO_CLK_EN to 1 in CPU_CLK_AUTO_CFG register"
+# devmem 0x10000044 32 0x80020133
 
 exit 0
