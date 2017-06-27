@@ -11,14 +11,14 @@ packages=(
     kmod-ipt-conntrack
     kmod-rt2800-usb
     kmod-usb-net-cdc-ether kmod-usb-net-cdc-ncm
-    kmod-usb-dwc2 kmod-usb-ledtrig-usbport
+    kmod-usb-ledtrig-usbport
     wpad-mini
     iwinfo
     igmpproxy
     uqmi
     kmod-usb-uhci
-    kmod-usb-serial kmod-usb-serial-option
+    kmod-usb-serial kmod-usb-serial-option kmod-usb-acm
     usb-modeswitch
     comgt
     picocom
-    http://dl.eko.one.pl/lede/17.01-SNAPSHOT/packages/mips_24kc/base/3ginfo-text_20170317_all.ipk )
+    http://dl.eko.one.pl/lede/17.01-SNAPSHOT/packages/mips_24kc/base/3ginfo-text_20170524_all.ipk )

@@ -13,9 +13,9 @@ packages=(
     igmpproxy
     kmod-usb-uhci
     kmod-usb-net-huawei-cdc-ncm
-    kmod-usb-serial kmod-usb-serial-option
+    kmod-usb-serial kmod-usb-serial-option kmod-usb-acm
     usb-modeswitch
     comgt-ncm
     block-mount kmod-usb-storage-extras
     kmod-fs-vfat kmod-nls-cp437 kmod-nls-cp852 kmod-nls-iso8859-1 kmod-nls-iso8859-2
-    http://dl.eko.one.pl/lede/17.01-SNAPSHOT/packages/mips_24kc/base/3ginfo-text_20170317_all.ipk )
+    http://dl.eko.one.pl/lede/17.01-SNAPSHOT/packages/mips_24kc/base/3ginfo-text_20170524_all.ipk )
