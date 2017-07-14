@@ -1,0 +1,17 @@
+# simple_ap packages
+
+packages=( 
+    -luci
+    -ppp -ppp-mod-pppoe
+    -odhcpd -odhcp6c
+    -ip6tables -kmod-ip6tables
+    -opkg
+    kmod-rt2800-usb
+    kmod-usb-uhci
+    kmod-usb-ledtrig-usbport
+    kmod-usb-net-cdc-ncm
+    kmod-usb-acm
+    wpad-mini
+    iwinfo
+    picocom
+)
