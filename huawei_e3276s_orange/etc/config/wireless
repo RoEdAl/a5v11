@@ -1,0 +1,19 @@
+config wifi-device  radio0
+	option type     mac80211
+	option channel  6
+	option hwmode	11g
+	option htmode	HT40
+	option path     '10180000.wmac'
+	option country  PL
+	option noscan	1
+	option disabled 1
+
+config wifi-iface
+	option device       radio0
+	option network      wlan
+	option mode         ap
+	option ssid         OrangePl
+	option encryption   'psk2+tkip+ccmp'
+	option key          'Kiszonka ma samolot'
+	option maxassoc	    10
+	option macaddr      '5e:47:ba:63:2f:a1'
