@@ -1,0 +1,4 @@
+config 3ginfo
+    option device '/dev/ttyUSB0'
+    option http_port 81
+    option language en
