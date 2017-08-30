@@ -2,7 +2,7 @@
 # the system init finished.
 
 # http://www.8devices.com/community/viewtopic.php?f=6&t=156
-logger -t RT5350F "Turning off unused ethernet ports"
+logger -t RT5350F 'Turning off unused ethernet ports'
 swconfig dev switch0 port 1 set disable 1
 swconfig dev switch0 port 2 set disable 1
 swconfig dev switch0 port 3 set disable 1
@@ -16,7 +16,9 @@ swconfig dev switch0 set apply
 #
 # Turn multicast forwarding on
 # http://wiki.openwrt.org/doc/recipes/dumbap
+# http://wiki.openwrt.org/doc/howto/udp_multicast
 #
-echo "0" > /sys/devices/virtual/net/br-lan/bridge/multicast_snooping
+echo -t MULTICAST 'Disabling multicast_snooping on br-lan'
+echo '0' > /sys/devices/virtual/net/br-lan/bridge/multicast_snooping
 
 exit 0

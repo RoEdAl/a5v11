@@ -16,4 +16,4 @@ config zone
 # include a file with users custom iptables rules
 config include
 	option path /etc/firewall.user
-
+	option reload 1

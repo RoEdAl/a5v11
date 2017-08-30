@@ -7,7 +7,9 @@ config interface loopback
 	option ipv6 0
 
 config interface lan
-	option ifname 'eth0.1 usb0'
+	list ifname 'eth0.1'
+	list ifname eth1
+	list ifname usb0
 	option force_link 1
 	option macaddr 'f6:b9:f1:da:0e:53'
 	option type bridge
@@ -23,3 +25,8 @@ config switch_vlan
 	option device switch0
 	option vlan 1
 	option ports '0 6t'
+
+config switch_port
+        option device eth0
+        option port 0
+        option pvid 1

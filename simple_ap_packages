@@ -6,12 +6,11 @@ packages=(
     -odhcpd -odhcp6c
     -ip6tables -kmod-ip6tables
     -opkg
-    kmod-rt2800-usb
+    -firewall
     kmod-usb-uhci
-    kmod-usb-ledtrig-usbport
-    kmod-usb-net-cdc-ncm
+    kmod-usb-net-cdc-ether kmod-usb-net-cdc-ncm
     kmod-usb-acm
+    usb-modeswitch
     wpad-mini
     iwinfo
-    picocom
 )
