@@ -1,6 +1,3 @@
-# Put your custom commands here that should be executed once
-# the system init finished.
-
 # http://www.8devices.com/community/viewtopic.php?f=6&t=156
 logger -t RT5350F 'Turning off unused ethernet ports'
 swconfig dev switch0 port 1 set disable 1
@@ -12,13 +9,5 @@ swconfig dev switch0 set apply
 # http://forum.vocore.io/viewtopic.php?f=10&t=284&sid=59df447f79a215d155a003e89bead897
 # logger -t RT5350F "Setting CPU_AUTO_CLK_EN to 1 in CPU_CLK_AUTO_CFG register"
 # devmem 0x10000044 32 0x80020133
-
-#
-# Turn multicast forwarding on
-# http://wiki.openwrt.org/doc/recipes/dumbap
-# http://wiki.openwrt.org/doc/howto/udp_multicast
-#
-echo -t MULTICAST 'Disabling multicast_snooping on br-lan'
-echo '0' > /sys/devices/virtual/net/br-lan/bridge/multicast_snooping
 
 exit 0

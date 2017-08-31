@@ -6,10 +6,10 @@ packages=(
     -odhcpd -odhcp6c
     -ip6tables -kmod-ip6tables
     -opkg
-    -firewall
+    -firewall -dnsmasq
     kmod-usb-uhci
     kmod-usb-net-cdc-ether kmod-usb-net-cdc-ncm
-    kmod-usb-acm
+    kmod-usb-net-rndis
     usb-modeswitch
     wpad-mini
     iwinfo
