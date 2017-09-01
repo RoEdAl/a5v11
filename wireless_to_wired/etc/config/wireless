@@ -1,6 +1,6 @@
 config wifi-device  radio0
 	option type     mac80211
-	option channel  6
+	option channel  auto
 	option hwmode	11g
 	option htmode	HT40
 	option path     '10180000.wmac'

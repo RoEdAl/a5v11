@@ -8,10 +8,10 @@ packages=(
     -opkg
     kmod-rt2800-usb
     kmod-usb-uhci
-    kmod-usb-dwc2 kmod-usb-ledtrig-usbport
+    kmod-usb-ledtrig-usbport
     kmod-usb-net-cdc-ether
     kmod-usb-net-cdc-ncm
-    kmod-ipt-conntrack
+    kmod-usb-net-rndis
     wpad-mini
     iwinfo
     relayd
