@@ -4,7 +4,7 @@ packages=(
     -luci
     -ppp -ppp-mod-pppoe
     -odhcpd odhcp6c
-    -ip6tables -kmod-ip6tables
+    -iptables -ip6tables
     -opkg
     -firewall -dnsmasq
     kmod-usb-uhci
