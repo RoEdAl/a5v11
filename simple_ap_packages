@@ -3,7 +3,7 @@
 packages=( 
     -luci
     -ppp -ppp-mod-pppoe
-    -odhcpd -odhcp6c
+    -odhcpd odhcp6c
     -ip6tables -kmod-ip6tables
     -opkg
     -firewall -dnsmasq
@@ -13,4 +13,5 @@ packages=(
     usb-modeswitch
     wpad-mini
     iwinfo
+    6rd
 )
