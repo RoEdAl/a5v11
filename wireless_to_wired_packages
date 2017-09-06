@@ -3,12 +3,12 @@
 packages=( 
     -luci
     -ppp -ppp-mod-pppoe
-    -odhcpd -odhcp6c
-    -ip6tables -kmod-ip6tables
+    -odhcpd odhcp6c
+    -iptables -ip6tables
+    -firewall -dnsmasq
     -opkg
     kmod-rt2800-usb
     kmod-usb-uhci
-    kmod-usb-ledtrig-usbport
     kmod-usb-net-cdc-ether
     kmod-usb-net-cdc-ncm
     kmod-usb-net-rndis

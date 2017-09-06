@@ -4,7 +4,9 @@ config interface loopback
 	option proto static
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
-	option ipv6 0
+
+config globals globals
+	option ula_prefix 'fd27:70fa:5c1e::/48'
 
 config interface lan
 	list ifname eth0.1
@@ -17,17 +19,21 @@ config interface lan
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
         option gateway '192.168.1.254'
-	option ipv6 0
+	option igmp_snooping 0
+	option stp 1
 
 config interface wwan
 	option proto dhcp
-	option ipv6 0
+
+config interface wwan6
+	option ifname @wwan
+	option proto dhcpv6
+	option reqprefix no
 
 config interface stabridge
         option proto relay
         list network lan 
         list network wwan
-	option ipv6 0
 
 config switch
 	option name switch0
