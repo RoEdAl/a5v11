@@ -19,8 +19,8 @@ config interface lan
 	option ipaddr '10.0.0.1'
 	option netmask '255.255.255.0'
         option gateway '192.168.1.254'
-	option igmp_snooping 0
 	option stp 1
+	option ip6assign 64
 
 config interface wwan
 	option proto dhcp

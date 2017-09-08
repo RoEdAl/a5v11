@@ -14,5 +14,4 @@ packages=(
     wpad-mini
     iwinfo
     relayd
-    igmpproxy
 )
