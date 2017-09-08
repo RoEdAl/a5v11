@@ -13,5 +13,5 @@ packages=(
     usb-modeswitch
     wpad-mini
     iwinfo
-    6rd
+    464xlat
 )
