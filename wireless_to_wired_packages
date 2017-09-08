@@ -5,7 +5,7 @@ packages=(
     -ppp -ppp-mod-pppoe
     -odhcpd odhcp6c
     -iptables -ip6tables
-    -firewall dnsmasq
+    -firewall -dnsmasq
     -opkg
     kmod-usb-uhci
     kmod-usb-net-cdc-ether
